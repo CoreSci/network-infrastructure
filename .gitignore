@@ -1,0 +1,9 @@
+# Diagnostic reports describe the local network (host name, MACs, IPs, Wi-Fi name)
+reports/
+
+# Local credentials
+.env
+
+# OS
+.DS_Store
+Thumbs.db
