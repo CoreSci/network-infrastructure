@@ -27,7 +27,7 @@ Each layer depends on the one below it, so test in this order and stop at the fi
 | Name resolution | Do names turn into addresses? | `nslookup <name>`, then against a second server |
 | Service | Does the specific service answer? | `Test-NetConnection <name> -Port <port>` |
 
-`diagnostics/windows-network-toolkit/netcheck.bat` automates the rows from addressing upward; the physical-link check stays manual.
+`diagnostics/windows-network-toolkit/netcheck.bat` automates the six rows from addressing upward; the physical-link check stays manual (`netreport.bat` records the Wi-Fi link details).
 
 ## 3. Compare against a known-good state
 
