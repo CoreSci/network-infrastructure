@@ -85,3 +85,5 @@ Text version:
 - `find` in a batch file can be shadowed by the Unix `find` that tools such as Git put on the PATH. `findstr` has no Unix twin, so the scripts use it.
 - `netsh int ip reset` rewrites the TCP/IP settings of every adapter, including static IPs. `network-reset.bat` warns before it runs, and `netreport.bat` is a quick way to record the old settings first.
 - Wi-Fi problems often sit below IP: `netsh wlan show interfaces` shows signal strength, band and link rate. The report includes it.
+
+- **Testing status:** `netcheck.bat` and `netreport.bat` were run on a real Windows PC. `network-reset.bat` was tested only as far as its administrator check; its three fixes have not been run.
