@@ -75,8 +75,7 @@ A **MAC address** identifies a network adapter on its local network (layer 2). I
 - Two bits of the first byte carry flags. **Multicast** (lowest bit set) addresses a group, not one adapter. **Locally administered** (second-lowest bit set) means the address was set by software, not burned in at the factory. Windows' *random hardware addresses* for Wi-Fi use such addresses, so an OUI lookup on them finds nothing, and the same laptop can show a different MAC on each network.
 - `FF-FF-FF-FF-FF-FF` is the **broadcast** address: every device on the local network receives it. DHCP and ARP requests use it, because the sender doesn't know who to ask yet.
 
-A MAC address never leaves its own network. **ARP** (layer 2) finds the MAC for an IP address on the same network. When a packet crosses a router, the router rewrites the MAC addresses for the next network, while the IP addresses stay the same end to end.
-
+A MAC address never leaves its own network. **ARP** (layer 2) finds the MAC for an IP address on the same network. When a packet crosses a router, the router rewrites the MAC addresses for the next network, while the IP addresses stay the same end to end (apart from NAT, which a home or office router applies at its internet edge, rewriting the private source address).
 **Mapped to `netcheck.bat`:** layer 3 (pinging the gateway) is the first test that needs ARP to work. If the gateway doesn't answer, `arp -a` shows whether the PC has even learned the gateway's MAC address. No entry for it points to a link or Wi-Fi problem rather than routing.
 
 ## Further reading
